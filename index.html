@@ -6396,7 +6396,7 @@
 			</div>
 		</section>
 		<section
-			class="has_ma_el_bg_slider elementor-section elementor-top-section elementor-element elementor-element-2a3f6fdb elementor-hidden-desktop elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default jltma-glass-effect-no"
+			class="has_ma_el_bg_slider elementor-section elementor-top-section elementor-element elementor-element-2a3f6fdb elementor-hidden-desktop elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default jltma-glass-effect-no modalsection"
 			data-id="2a3f6fdb" data-element_type="section">
 			<div class="elementor-container elementor-column-gap-default">
 				<div class="has_ma_el_bg_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1fefb027 jltma-glass-effect-no"
@@ -6442,6 +6442,9 @@
 								jQuery('.wdp-button-wrapper button').on('click', function () {
 									jQuery('.modalx').addClass('removeModals');
 									jQuery('body').css('overflow', 'auto');
+									setInterval(() => {
+										jQuery('.modalsection').css('display', 'none');
+									}, 2000);
 
 								});
 							</script>
