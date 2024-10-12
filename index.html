@@ -4097,7 +4097,6 @@
 	<meta name="msapplication-TileImage"
 		content="https://test.leafitation.id/wp-content/uploads/2024/05/cropped-logo-leafitation-270x270.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<script src="./assets/wp-emoji-release.min.js" defer=""></script>
 </head>
 <body
 	class="leafitationtemplate-template leafitationtemplate-template-elementor_canvas single single-leafitationtemplate postid-1857 ast-header-break-point ast-separate-container ast-two-container ast-no-sidebar astra-4.6.9 ast-blog-single-style-1 ast-custom-post-type ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-normal-title-enabled elementor-default elementor-template-canvas elementor-kit-6 elementor-page elementor-page-1857 e--ua-isTouchDevice e--ua-blink e--ua-chrome e--ua-webkit"
@@ -6402,63 +6401,71 @@
 			<div class="elementor-container elementor-column-gap-default">
 				<div class="has_ma_el_bg_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1fefb027 jltma-glass-effect-no"
 					data-id="1fefb027" data-element_type="column">
-					<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-6b8070f2 jltma-glass-effect-no elementor-widget elementor-widget-weddingpress-wellcome"
-							data-id="6b8070f2" data-element_type="widget" data-widget_type="weddingpress-wellcome.default">
-							<div class="elementor-widget-container">
-		
-								<div class="modalx" data-sampul="https://nd91jqf.github.io/foto/EDIT-1180.jpg">
-		
-									<div class="overlayy"></div>
-									<div class="content-modalx">
-										<div class="info_modalx">
-											<div class="elementor-image img"></div>
-											<div class="wdp-mempelai" style="width: auto !important;">Andre &amp; Erlina
-											</div>
-											<div class="wdp-dear" style="width: auto !important;margin-top: 10px !important;">
-												Kepada
-												Bapak/Ibu/Saudara/i</div>
-											<div class="wdp-name namatamu" style="width: auto !important;"></div>
-		
-											<div class="wdp-button-wrapper" id="wdp-button-wrapper">
-												<button class="elementor-button">
-													<span>
-														<i aria-hidden="true" class="far fa-envelope-open"></i> </span>
-													Buka Undangan </button>
-											</div>
-		
-		
-		
-		
-		
+					<div class="elementor-element elementor-element-6b8070f2 jltma-glass-effect-no elementor-widget elementor-widget-weddingpress-wellcome"
+						data-id="6b8070f2" data-element_type="widget" data-widget_type="weddingpress-wellcome.default">
+						<div class="elementor-widget-container">
+					
+							<div class="modalx" data-sampul="https://nd91jqf.github.io/foto/EDIT-1180.jpg">
+					
+								<div class="overlayy"></div>
+								<div class="content-modalx">
+									<div class="info_modalx">
+										<div class="elementor-image img"></div>
+										<div class="wdp-mempelai" style="width: auto !important;">Andre &amp; Erlina
 										</div>
+										<div class="wdp-dear" style="width: auto !important;margin-top: 10px !important;">
+											Kepada
+											Bapak/Ibu/Saudara/i</div>
+										<div class="wdp-name namatamu" style="width: auto !important;"></div>
+					
+										<div class="wdp-button-wrapper" id="wdp-button-wrapper">
+											<button class="elementor-button">
+												<span>
+													<i aria-hidden="true" class="far fa-envelope-open"></i> </span>
+												Buka Undangan </button>
+										</div>
+					
+					
+					
+					
+					
 									</div>
 								</div>
-		
-		
-		
-								<script>
-									const sampul = jQuery('.modalx').data('sampul');
-									jQuery('.modalx').css('background-image', 'url(' + sampul + ')');
-									jQuery('body').css('overflow', 'hidden');
-									jQuery('.wdp-button-wrapper button').on('click', function () {
-										jQuery('.modalx').addClass('removeModals');
-										jQuery('body').css('overflow', 'auto');
+							</div>
+					
+					
+					
+							<script>
+								const sampul = jQuery('.modalx').data('sampul');
+								jQuery('.modalx').css('background-image', 'url(' + sampul + ')');
+								jQuery('body').css('overflow', 'hidden');
+								jQuery('.wdp-button-wrapper button').on('click', function () {
+									jQuery('.modalx').addClass('removeModals');
+									jQuery('body').css('overflow', 'auto');
 
-									});
-								</script>
-		
-		
-		
-								<script>
-									//var z = document.querySelector('#wdp-button-wrapper');
-									//z.addEventListener("click", function(event) {
+								});
+							</script>
+					
+					
+					
+							<script>
+								//var z = document.querySelector('#wdp-button-wrapper');
+								//z.addEventListener("click", function(event) {
 
-									//Neo - Added New Conditional Statement for select Audio or Youtube
-									var isYT = false;
-									jQuery("#wdp-button-wrapper").on("click", "button", function () {
-										// var isYT = false;
-										playAudio();
+								//Neo - Added New Conditional Statement for select Audio or Youtube
+								var isYT = false;
+								jQuery("#wdp-button-wrapper").on("click", "button", function () {
+									// var isYT = false;
+									playAudio();
+									if (document.body.contains(document.getElementById("song"))) {
+										document.getElementById("song").play();
+										isYT = false;
+									} else {
+										isYT = true;
+										player.playVideo();
+									}
+									function playAudio() {
+										var isYT = false;
 										if (document.body.contains(document.getElementById("song"))) {
 											document.getElementById("song").play();
 											isYT = false;
@@ -6466,50 +6473,40 @@
 											isYT = true;
 											player.playVideo();
 										}
-										function playAudio() {
-											var isYT = false;
-											if (document.body.contains(document.getElementById("song"))) {
-												document.getElementById("song").play();
-												isYT = false;
-											} else {
-												isYT = true;
-												player.playVideo();
-											}
-										}
+									}
+								});
+							</script>
+							<script>
+								// decode &amp; and \'
+								if (jQuery('.namatamu').length >= 1) {
+									let tmpHtmlNamatamu = document.querySelectorAll('.namatamu')
+									tmpHtmlNamatamu.forEach((tamuTexts) => {
+										tamuTexts.innerHTML = cleanIts(tamuTexts.innerHTML);
 									});
-								</script>
-								<script>
-									// decode &amp; and \'
-									if (jQuery('.namatamu').length >= 1) {
-										let tmpHtmlNamatamu = document.querySelectorAll('.namatamu')
-										tmpHtmlNamatamu.forEach((tamuTexts) => {
-											tamuTexts.innerHTML = cleanIts(tamuTexts.innerHTML);
-										});
-									}
-									function cleanIts(str) {
+								}
+								function cleanIts(str) {
 
-										return jQuery("<textarea></textarea>").html(str.replace(/\\/g, "")).text();
-									}
-								</script>
-		
-								<style type="text/css">
-									.elementor-button-qr {
-										display: inline-block;
-										line-height: 1;
-										background-color: #818a91;
-										font-size: 15px;
-										padding: 12px 24px;
-										border-radius: 3px;
-										color: #fff;
-										fill: #fff;
-										text-align: center;
-										-webkit-transition: all .3s;
-										-o-transition: all .3s;
-										transition: all .3s;
-									}
-								</style>
-		
-							</div>
+									return jQuery("<textarea></textarea>").html(str.replace(/\\/g, "")).text();
+								}
+							</script>
+					
+							<style type="text/css">
+								.elementor-button-qr {
+									display: inline-block;
+									line-height: 1;
+									background-color: #818a91;
+									font-size: 15px;
+									padding: 12px 24px;
+									border-radius: 3px;
+									color: #fff;
+									fill: #fff;
+									text-align: center;
+									-webkit-transition: all .3s;
+									-o-transition: all .3s;
+									transition: all .3s;
+								}
+							</style>
+					
 						</div>
 					</div>
 				</div>
