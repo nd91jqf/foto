@@ -1,0 +1,104 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #b7b1a4;
+}
+
+.prebase {
+  z-index: 2001;
+  background-color: #b7b1a4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 1s ease;
+  /* Transition untuk efek fade out */
+  position: fixed;
+}
+
+.preloader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spinner-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 120px;
+  height: 120px;
+  border: 8px solid #fff;
+  border-top: 8px solid transparent;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  position: absolute;
+}
+
+.photo-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-container i {
+  color: #fff;
+  /* Warna ikon */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: 70px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+
+.loading-text::after {
+  content: "Loading...";
+  animation: dot-blink 1.5s steps(4) infinite;
+}
+
+@keyframes dot-blink {
+  0% {
+    content: "Loading";
+  }
+
+  33% {
+    content: "Loading.";
+  }
+
+  66% {
+    content: "Loading..";
+  }
+
+  100% {
+    content: "Loading...";
+  }
+}
